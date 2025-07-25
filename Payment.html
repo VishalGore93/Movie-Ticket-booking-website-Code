@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie Website</title>
+        <link rel="stylesheet" href="Payment.css">
+		<link rel="stylesheet" href="">
+        <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <!-- Link Swiper's CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    </head>
+  <body>
+    <!-- Header -->
+    <header>
+        <a href="#home" class="logo">
+            <i class='bx bxs-movie'></i>Golden Jubilee
+        </a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <!-- menu  -->
+        <ul class="navbar">
+            <li><a href="newindex2.html">Home</a></li>
+            <li><a href="Movies.html">Movies</a></li>
+            <li><a href="#coming">Coming</a></li>
+            <li><a href="#newsletter">Newsletter</a></li>
+        </ul>
+        <a href="Signup.html" class="btn">Sign In</a>
+    </header>
+    
+    <!-- Navigation -->
+    <div class="container">
+		<div class="left">
+			<p>Payment methods</p>
+			<hr style="border:1px solid #e70909; margin: 0 15px;">
+			<div class="methods">
+				<div onclick="doFun()" id="tColorA" style="color: greenyellow;"><i class="fa-solid fa-credit-card" style="color: greenyellow;"></i> Payment by card</div>
+				<div onclick="doFunA()" id="tColorB"><i class="fa-solid fa-building-columns"></i> UPI PAYMENT</div>
+				<div onclick="doFunB()" id="tColorC"><i class="fa-solid fa-wallet"></i> Internet banks</div>
+			</div>
+			<hr style="border:1px solid #e80b0b; margin: 0 15px;">
+		</div>
+		<div class="center">
+			<a href="https://www.shift4shop.com/credit-card-logos.html"><img alt="Credit Card Logos" title="Credit Card Logos" src="https://www.shift4shop.com/images/credit-card-logos/cc-lg-4.png" width="250" height="auto"/></a>
+			<hr style="border:1px solid #f40b0b; margin: 0 15px;">
+
+			<div class="card-details">
+				<form>
+					<p>Card number</p>
+					<div class="email">
+						<input id="number" class="cc-number" placeholder="Card number" maxlength="19" required>
+					
+					</div>
+
+					<div class="c-details">
+						<div>
+							<p>Expiry date</p>
+							<input id="e-date" class="cc-exp" placeholder="MM/YY" required maxlength="5" required>
+						</div>
+						<div>
+							<p>CVV</p>
+							<div class="cvv-box">
+								<input id="cvv" class="cc-cvv" placeholder="CVV" required maxlength="3" required>
+		                       
+							</div>
+						</div>
+					</div>
+					<div class="email">
+						<p>Email</p>
+						<input type="email" placeholder="example@email.com" id="email" required>
+					</div>
+					<button type="submit" class="btn" onclick="openPopup()">PAY NOW</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="right">
+			<button type="submit" class="btn" onclick="openPopup()">
+            <h2>booking confirmation</h2></button>
+			<p>---Movie information--</p>
+			<hr style="border:1px solid #f00505; margin: 0 15px;">
+			<div class="details">
+				<div style="font-weight: bold; padding: 3px 0;">discription</div>
+				<div style="padding: 3px 0;">Test payment</div>
+			</div>
+			<hr style="border:1px solid #df0505; margin: 0 15px;">
+			<a href="https://www.shift4shop.com/credit-card-logos.html"><img alt="Credit Card Logos" title="Credit Card Logos" src="https://www.shift4shop.com/images/credit-card-logos/cc-lg-4.png" width="100%" height="auto" /></a>
+		</div>
+		
+		
+	</div>
+
+    <div class="container1">
+            <div class="popup" id="popup">
+                <img src="./img/tick.png" alt="">
+                <h2>Thank You!</h2>
+                <p>Your details has been successfully submitted. Thanks!</p>
+				<a href="newindex2.html">
+                <button type="button" onclick="closePopup()">OK </button></a>
+            </div>
+        </div>
+
+
+        <script>
+            let popup = document.getElementById("popup");
+
+            function openPopup(){
+                popup.classList.add("open-popup");
+            }
+            function closePopup(){
+                popup.classList.remove("open-popup");
+            }
+        </script>
+
+    <!-- Footer -->
+    <section class="footer">
+        <a href="" class="logo">
+            <i class="bx bxs-movie"></i>Golden Jubilee
+        </a>
+        <div class="social">
+            <a href=""><i class='bx bxl-facebook'></i></a>
+            <a href=""><i class='bx bxl-twitter'></i></a>
+            <a href=""><i class='bx bxl-instagram'></i></a>
+        </div>
+    </section>
+
+    <!-- Copyright  -->
+    <div class="copyright">
+        <p>&#169; Golden Jubilee All Right Reserved</p>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="Index.js"></script>
+    <script src="Payment.js"></script>
+</body>
+</html>
